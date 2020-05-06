@@ -20,9 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/category', 'HomeController@category')->name('category');
-Route::get('/subcategory', 'HomeController@subCategory')->name('subcategory');
-Route::get('/post', 'HomeController@post')->name('post');
+// Route::get('/category', 'HomeController@category')->name('category');
+// Route::get('/subcategory', 'HomeController@subCategory')->name('subcategory');
+// Route::get('/post', 'HomeController@post')->name('post');
 
-// Route::livewire('/category', 'categorycomponent')->layout('livewire.category.index')->name('category');
-// Route::livewire('/subcategory', 'sub-category-component')->layout('livewire.subcatyegory.index')->name('subcategory');
+Route::livewire('/category', 'categorycomponent')->name('category');
+Route::livewire('/subcategory', 'sub-category-component')->name('subcategory');
+Route::livewire('/post', 'post-component')->name('post');
