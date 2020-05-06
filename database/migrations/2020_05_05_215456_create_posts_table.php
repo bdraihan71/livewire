@@ -13,22 +13,15 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints('posts', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('body');
             $table->string('image')->nullable();
             $table->bigInteger('user_id');
+            $table->bigInteger('category_id');
             $table->bigInteger('subcategory_id');
             $table->timestamps();
-
-            $table->foreignId('user_id')
-            ->constrained()
-            ->onDelete('cascade');
-
-            $table->foreignId('user_id')
-            ->constrained()
-            ->onDelete('subcategory_id');
         });
     }
 

@@ -15,5 +15,5 @@
         </select>
         @error('category_id') <span class="text-danger">{{ $message }}</span> @enderror
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Update</button>
 </form>

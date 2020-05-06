@@ -23,6 +23,7 @@ class SubCategoryComponent extends Component
     public function resetInput()
     {
         $this->name = null;
+        $this->category_id = null;
     }
 
     public function store()

@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('livewire.subcategory.index');
     }
+
+    public function post()
+    {
+        return view('livewire.post.index');
+    }
 }
